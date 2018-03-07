@@ -92,5 +92,11 @@ $(function() {
             var s = this.options._state;
             s.cur.html(s.curval)
             this.element.val(s.curval);
+            if(s.prevval !== s.curval) {
+                s.delta.closest("tr").addClass("trHighlight");
+            } else {``
+                s.delta.closest("tr").removeClass("trHighlight");
+            }
+
         }});
 });
